@@ -1,8 +1,6 @@
 <?php
 namespace common\models;
-
 use yii;
-
 class RegistrosHelpers
 {
     public static function userTiene($modelo_nombre)

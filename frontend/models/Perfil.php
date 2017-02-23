@@ -1,7 +1,5 @@
 <?php
-
 namespace frontend\models;
-
 use Yii;
 use yii\db\ActiveRecord;
 use yii\db\Expression;
@@ -9,7 +7,6 @@ use common\models\User;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Url;
 use yii\helpers\Html;
-
 /**
  * This is the model class for table "perfil".
  *
@@ -33,7 +30,6 @@ class Perfil extends \yii\db\ActiveRecord
     {
         return 'perfil';
     }
-
     /**
      * behaviors
      */
@@ -50,7 +46,6 @@ class Perfil extends \yii\db\ActiveRecord
             ],
         ];
     }
-
     /**
      * @inheritdoc
      */
@@ -65,7 +60,6 @@ class Perfil extends \yii\db\ActiveRecord
             [['fecha_nacimiento'], 'date', 'format'=>'php:Y-m-d']
         ];
     }
-
     /**
      * @inheritdoc
      */
@@ -85,7 +79,6 @@ class Perfil extends \yii\db\ActiveRecord
             'perfilIdLink' => Yii::t('app', 'Perfil'),
         ];
     }
-
     /**
      * @return \yii\db\ActiveQuery
      */
@@ -93,11 +86,9 @@ class Perfil extends \yii\db\ActiveRecord
     {
         return $this->hasOne(Genero::className(), ['id' => 'genero_id']);
     }
-
     /**
      * @return \yii\db\ActiveQuery
      */
-
     public function getGeneroNombre()
     {
         return $this->genero->genero_nombre;
@@ -105,13 +96,11 @@ class Perfil extends \yii\db\ActiveRecord
     /**
      * get lista de generos para lista desplegable
      */
-
     public static function getGeneroLista()
     {
         $dropciones = Genero::find()->asArray()->all();
         return ArrayHelper::map($dropciones, 'id', 'genero_nombre');
     }
-
     /**
      * @return \yii\db\ActiveQuery
      */
@@ -119,7 +108,6 @@ class Perfil extends \yii\db\ActiveRecord
     {
         return $this->hasOne(User::className(), ['id' => 'user_id']);
     }
-
     /**
      * @get Username
      */
@@ -134,11 +122,9 @@ class Perfil extends \yii\db\ActiveRecord
     {
         return $this->user ? $this->user->id : 'ninguno';
     }
-
     /**
      * @getUserLink
      */
-
     public function getUserLink()
     {
         $url = Url::to(['user/view', 'id'=>$this->UserId]);
@@ -148,12 +134,10 @@ class Perfil extends \yii\db\ActiveRecord
     /**
      * @getProfileLink
      */
-
     public function getPerfilIdLink()
     {
         $url = Url::to(['perfil/update', 'id'=>$this->id]);
         $opciones = [];
         return Html::a($this->id, $url, $opciones);
     }
-
 }

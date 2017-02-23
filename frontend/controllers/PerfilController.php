@@ -1,7 +1,5 @@
 <?php
-
 namespace frontend\controllers;
-
 use Yii;
 use frontend\models\Perfil;
 use frontend\models\search\PerfilSearch;
@@ -19,68 +17,60 @@ class PerfilController extends Controller
      * @inheritdoc
      */
     public function behaviors()
-{
+    {
         return [
-            'access' => [
+        'access' => [
                 'class' => \yii\filters\AccessControl::className(),
                 'only' => ['index', 'view','create', 'update', 'delete'],
                 'rules' => [
-                        [
+                    [
                         'actions' => ['index', 'view','create', 'update', 'delete'],
                         'allow' => true,
                         'roles' => ['@'],
-                        ],
-                    
                     ],
+                        
                 ],
+            ],
+     
             'access2' => [
                 'class' => \yii\filters\AccessControl::className(),
                 'only' => ['index', 'view','create', 'update', 'delete'],
                 'rules' => [
-                        [
-                        'actions' => ['index', 'view','create', 'update', 'delete'],
+                    [
+                       'actions' => ['index', 'view','create', 'update', 'delete'],
                         'allow' => true,
                         'roles' => ['@'],
-                        'matchCallback' => function ($rule,$action){
+                        'matchCallback' => function ($rule, $action) {
                             return PermisosHelpers::requerirEstado('Activo');
                         }
                      ],
-                    
-                    ],
+                        
                 ],
-           
-            'verbs' => [
-            'class' => VerbFilter::className(),
-            'actions' => [
-                'delete' => ['post'],
-                    ],
-                  ],
-         ];
-}
-
+                   
+            ],
+                
+        'verbs' => [
+                'class' => VerbFilter::className(),
+                'actions' => [
+                   'delete' => ['post'],
+                ],
+            ],
+        ];
+    }
     /**
      * Lists all Perfil models.
      * @return mixed
      */
     public function actionIndex()
 {
-
     if ($ya_existe = RegistrosHelpers::userTiene('perfil')) {
-
         return $this->render('view', [
-
             'model' => $this->findModel($ya_existe),
-
         ]);
-
     } else {
-
         return $this->redirect(['create']);
-
     }
-
 }
-
     /**
      * Displays a single Perfil model.
      * @param integer $id
@@ -89,17 +79,11 @@ class PerfilController extends Controller
     public function actionView()
 {
     if ($ya_existe = RegistrosHelpers::userTiene('perfil')) {
-
         return $this->render('view', [
-
             'model' => $this->findModel($ya_existe),
-
         ]);
-
     } else {
-
         return $this->redirect(['create']);
-
     }
 }
     /**
@@ -114,11 +98,8 @@ class PerfilController extends Controller
       $model->user_id = \Yii::$app->user->identity->id;      
     
       if ($ya_existe = RegistrosHelpers::userTiene('perfil')) {
-
           return $this->render('view', [
-
                 'model' => $this->findModel($ya_existe),
-
             ]);
     
       } elseif ($model->load(Yii::$app->request->post()) && $model->save()){
@@ -128,13 +109,10 @@ class PerfilController extends Controller
       } else {
                 
           return $this->render('create', [
-
                 'model' => $model,
-
                  ]);
       }
 }
-
     /**
      * Updates an existing Perfil model.
      * If update is successful, the browser will be redirected to the 'view' page.
@@ -144,8 +122,6 @@ class PerfilController extends Controller
     public function actionUpdate()
 {
     PermisosHelpers::requerirUpgradeA('Pago');
-
-
     if($model =  Perfil::find()->where(['user_id' => 
         Yii::$app->user->identity->id])->one()) {
         
@@ -166,7 +142,6 @@ class PerfilController extends Controller
             
      }
 }
-
     /**
      * Deletes an existing Perfil model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
@@ -182,7 +157,6 @@ class PerfilController extends Controller
         
     return $this->redirect(['site/index']);
 }
-
     /**
      * Finds the Perfil model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
@@ -198,6 +172,4 @@ class PerfilController extends Controller
             throw new NotFoundHttpException('The requested page does not exist.');
         }
     }
-
-
 }

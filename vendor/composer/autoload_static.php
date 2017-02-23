@@ -4,14 +4,13 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitc38f594636902553579bbe2e9b726659
+class ComposerStaticInit2893ca5933c229ee72fc3947769d1274
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
         '2cffec82183ee1cea088009cef9a6fc3' => __DIR__ . '/..' . '/ezyang/htmlpurifier/library/HTMLPurifier.composer.php',
         '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
         'a0edc8309cc5e1d60e3047b5df6b7052' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/functions_include.php',
-        '7e702cccdb9dd904f2ccf22e5f37abae' => __DIR__ . '/..' . '/facebook/php-sdk-v4/src/Facebook/polyfills.php',
         '180092cfc969a12e06f2132a203a3184' => __DIR__ . '/..' . '/codeception/verify/src/Codeception/function.php',
     );
 
@@ -24,18 +23,12 @@ class ComposerStaticInitc38f594636902553579bbe2e9b726659
             'yii\\faker\\' => 10,
             'yii\\debug\\' => 10,
             'yii\\composer\\' => 13,
-            'yii\\codeception\\' => 16,
             'yii\\bootstrap\\' => 14,
             'yii\\' => 4,
         ),
         'p' => 
         array (
             'phpDocumentor\\Reflection\\' => 25,
-        ),
-        'k' => 
-        array (
-            'kartik\\social\\' => 14,
-            'kartik\\base\\' => 12,
         ),
         'c' => 
         array (
@@ -69,7 +62,6 @@ class ComposerStaticInitc38f594636902553579bbe2e9b726659
         'F' => 
         array (
             'Faker\\' => 6,
-            'Facebook\\' => 9,
         ),
         'D' => 
         array (
@@ -108,10 +100,6 @@ class ComposerStaticInitc38f594636902553579bbe2e9b726659
         array (
             0 => __DIR__ . '/..' . '/yiisoft/yii2-composer',
         ),
-        'yii\\codeception\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/yiisoft/yii2-codeception',
-        ),
         'yii\\bootstrap\\' => 
         array (
             0 => __DIR__ . '/..' . '/yiisoft/yii2-bootstrap',
@@ -125,14 +113,6 @@ class ComposerStaticInitc38f594636902553579bbe2e9b726659
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
             1 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
             2 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
-        ),
-        'kartik\\social\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/kartik-v/yii2-social',
-        ),
-        'kartik\\base\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/kartik-v/yii2-krajee-base',
         ),
         'cebe\\markdown\\' => 
         array (
@@ -193,10 +173,6 @@ class ComposerStaticInitc38f594636902553579bbe2e9b726659
         'Faker\\' => 
         array (
             0 => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker',
-        ),
-        'Facebook\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/facebook/php-sdk-v4/src/Facebook',
         ),
         'Doctrine\\Instantiator\\' => 
         array (
@@ -559,6 +535,7 @@ class ComposerStaticInitc38f594636902553579bbe2e9b726659
         'PHP_Token_NEW' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token.php',
         'PHP_Token_NS_C' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token.php',
         'PHP_Token_NS_SEPARATOR' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token.php',
+        'PHP_Token_NULLSAFE_OBJECT_OPERATOR' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token.php',
         'PHP_Token_NUM_STRING' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token.php',
         'PHP_Token_OBJECT_CAST' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token.php',
         'PHP_Token_OBJECT_OPERATOR' => __DIR__ . '/..' . '/phpunit/php-token-stream/src/Token.php',
@@ -714,10 +691,10 @@ class ComposerStaticInitc38f594636902553579bbe2e9b726659
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitc38f594636902553579bbe2e9b726659::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitc38f594636902553579bbe2e9b726659::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInitc38f594636902553579bbe2e9b726659::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInitc38f594636902553579bbe2e9b726659::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit2893ca5933c229ee72fc3947769d1274::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit2893ca5933c229ee72fc3947769d1274::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit2893ca5933c229ee72fc3947769d1274::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit2893ca5933c229ee72fc3947769d1274::$classMap;
 
         }, null, ClassLoader::class);
     }

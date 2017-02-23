@@ -18,8 +18,8 @@ class PerfilSearch extends Perfil
     public function rules()
     {
         return [
-            [['id', 'genero_id', 'user_id'], 'integer'],
-            [['nombre', 'apellido', 'fecha_nacimiento', 'created_at', 'updated_at'], 'safe'],
+            [['id', 'user_id', 'genero_id'], 'integer'],
+            [['nombre', 'apellido', 'fecha_nacimiento', 'create_at', 'updated_at'], 'safe'],
         ];
     }
 
@@ -60,15 +60,15 @@ class PerfilSearch extends Perfil
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
-            'created_at' => $this->created_at,
+            'fecha_nacimiento' => $this->fecha_nacimiento,
+            'create_at' => $this->create_at,
             'updated_at' => $this->updated_at,
-            'genero_id' => $this->genero_id,
             'user_id' => $this->user_id,
+            'genero_id' => $this->genero_id,
         ]);
 
         $query->andFilterWhere(['like', 'nombre', $this->nombre])
-            ->andFilterWhere(['like', 'apellido', $this->apellido])
-            ->andFilterWhere(['like', 'fecha_nacimiento', $this->fecha_nacimiento]);
+            ->andFilterWhere(['like', 'apellido', $this->apellido]);
 
         return $dataProvider;
     }

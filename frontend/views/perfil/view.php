@@ -1,14 +1,11 @@
 <?php
-
 use yii\helpers\Html;
 use yii\widgets\DetailView;
 use common\models\PermisosHelpers;
-
 /**
  * @var yii\web\View $this
  * @var frontend\models\Perfil $model
  */
-
 $this->title = "Perfil de " . $model->user->username;
 $this->params['breadcrumbs'][] = ['label' => 'Perfiles', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
@@ -20,11 +17,8 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <p>
         <?Php
-
         //esto no es necesario pero está aquí como ejemplo
-
         if (PermisosHelpers::userDebeSerPropietario('perfil', $model->id)) {
-
             echo Html::a('Update', ['update', 'id' => $model->id],
                 ['class' => 'btn btn-primary']);
         } ?>

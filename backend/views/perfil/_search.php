@@ -4,11 +4,11 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\search\PerfilSearch */
+/* @var $model frontend\controllers\PerfilSearch */
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
-<div class="user-search">
+<div class="perfil-search">
 
     <?php $form = ActiveForm::begin([
         'action' => ['index'],
@@ -17,27 +17,19 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'id') ?>
 
-    <?= $form->field($model, 'username') ?>
+    <?= $form->field($model, 'nombre') ?>
 
-    <?= $form->field($model, 'auth_key') ?>
+    <?= $form->field($model, 'apellido') ?>
 
-    <?= $form->field($model, 'password_hash') ?>
+    <?= $form->field($model, 'fecha_nacimiento') ?>
 
-    <?= $form->field($model, 'password_reset_token') ?>
-
-    <?php // echo $form->field($model, 'email') ?>
-
-    <?php // echo $form->field($model, 'status') ?>
-
-    <?php // echo $form->field($model, 'created_at') ?>
+    <?= $form->field($model, 'create_at') ?>
 
     <?php // echo $form->field($model, 'updated_at') ?>
 
-    <?php // echo $form->field($model, 'rol_id') ?>
+    <?php // echo $form->field($model, 'user_id') ?>
 
-    <?php // echo $form->field($model, 'estado_id') ?>
-
-    <?php // echo $form->field($model, 'tipo_usuario_id') ?>
+    <?php // echo $form->field($model, 'genero_id') ?>
 
     <div class="form-group">
         <?= Html::submitButton('Search', ['class' => 'btn btn-primary']) ?>

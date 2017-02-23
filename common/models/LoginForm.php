@@ -3,8 +3,9 @@ namespace common\models;
 
 use Yii;
 use yii\base\Model;
-use yii\web\NotFoundHttpException;
+use yii\web\NotFoundHttpException; 
 use common\models\PermisosHelpers;
+
 
 /**
  * Login form
@@ -15,7 +16,7 @@ class LoginForm extends Model
     public $password;
     public $rememberMe = true;
 
-    private $_user= false;
+    private $_user;
 
 
     /**
@@ -58,8 +59,7 @@ class LoginForm extends Model
     public function login()
     {
         if ($this->validate()) {
-            return Yii::$app->user->login($this->getUser(), 
-            $this->rememberMe ? 3600 * 24 * 30 : 0);
+            return Yii::$app->user->login($this->getUser(), $this->rememberMe ? 3600 * 24 * 30 : 0);
         } else {
             return false;
         }
@@ -67,12 +67,8 @@ class LoginForm extends Model
 
     public function loginAdmin()
     {
-        if (($this->validate()) 
-            && PermisosHelpers::requerirMinimoRol('Admin', 
-                $this->getUser()->id)) {
-
-            return Yii::$app->user->login($this->getUser(), 
-                $this->rememberMe ? 3600 * 24 * 30 : 0);
+        if (($this->validate()) && PermisosHelpers::requerirMinimoRol('Administrador', $this->getUser()->id)) {
+            return Yii::$app->user->login($this->getUser(), $this->rememberMe ? 3600 * 24 * 30 : 0);
         } else {
             throw new NotFoundHttpException('No Pasarás.');
         }
@@ -85,7 +81,7 @@ class LoginForm extends Model
      */
     protected function getUser()
     {
-        if ($this->_user === false) {
+        if ($this->_user === null) {
             $this->_user = User::findByUsername($this->username);
         }
 

@@ -28,10 +28,10 @@ $this->params['breadcrumbs'][] = $this->title;
             'nombre:ntext',
             'apellido:ntext',
             'fecha_nacimiento',
-            'created_at',
+            'create_at',
             // 'updated_at',
-            // 'genero_id',
             // 'user_id',
+            // 'genero_id',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],
