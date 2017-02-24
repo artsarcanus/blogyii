@@ -28,8 +28,8 @@ $this->params['breadcrumbs'][] = $this->title;
             'nombre:ntext',
             'apellido:ntext',
             'fecha_nacimiento',
-            'create_at',
-            // 'updated_at',
+            'created_at',
+            'updated_at',
             // 'user_id',
             // 'genero_id',
 

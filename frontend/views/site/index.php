@@ -2,16 +2,26 @@
 
 /* @var $this yii\web\View */
 
+use \yii\bootstrap\Modal;
+use kartik\social\FacebookPlugin; 
+use \yii\bootstrap\Collapse;
+use \yii\bootstrap\Alert;
+use yii\helpers\Html;
 $this->title = 'My Yii Application';
 ?>
 <div class="site-index">
 
+
     <div class="jumbotron">
         <h1>Congratulations!</h1>
-
-        <p class="lead">You have successfully created your Yii-powered application.</p>
-
-        <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>
+        <p>
+        <?php
+        if (Yii::$app->user->isGuest){
+            echo Html::a('Get Started Today', ['site/signup'],
+                ['class' => 'btn btn-lg btn-success']);
+        }
+        ?>
+        </p>    
     </div>
 
     <div class="body-content">
