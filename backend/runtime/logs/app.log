@@ -3868,3 +3868,278 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1487934825.46
     'REQUEST_TIME' => 1487934825
 ]
+2017-02-25 00:03:18 [127.0.0.1][1][bhg9kn8oceeglj56thhl4q81g4][error][yii\web\HttpException:405] exception 'yii\web\MethodNotAllowedHttpException' with message 'Method Not Allowed. This url can only handle the following request methods: POST.' in /Applications/XAMPP/xamppfiles/htdocs/blogyii/vendor/yiisoft/yii2/filters/VerbFilter.php:105
+Stack trace:
+#0 [internal function]: yii\filters\VerbFilter->beforeAction(Object(yii\base\ActionEvent))
+#1 /Applications/XAMPP/xamppfiles/htdocs/blogyii/vendor/yiisoft/yii2/base/Component.php(545): call_user_func(Array, Object(yii\base\ActionEvent))
+#2 /Applications/XAMPP/xamppfiles/htdocs/blogyii/vendor/yiisoft/yii2/base/Controller.php(272): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#3 /Applications/XAMPP/xamppfiles/htdocs/blogyii/vendor/yiisoft/yii2/web/Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#4 /Applications/XAMPP/xamppfiles/htdocs/blogyii/vendor/yiisoft/yii2/base/Controller.php(154): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#5 /Applications/XAMPP/xamppfiles/htdocs/blogyii/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('logout', Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/blogyii/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('site/logout', Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/blogyii/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 /Applications/XAMPP/xamppfiles/htdocs/blogyii/backend/web/index.php(17): yii\base\Application->run()
+#9 {main}
+2017-02-25 00:03:18 [127.0.0.1][1][bhg9kn8oceeglj56thhl4q81g4][info][application] $_GET = [
+    'r' => 'site/logout'
+]
+
+$_COOKIE = [
+    '_csrf-frontend' => '746d413aec5ee6db873e5f19d3aeb05bd699fc77f8a5382f6f178e9db03576a8a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"lagtA0sk0Cx5EnJnhpXCV-Ncw-vGw8Iq\";}'
+    '_csrf-backend' => '662fba13cc632a4686888605bd71df8768c4346fcf6ac8223220a3b9c7214179a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"98Uz_QTf5ETTdYFuDKy0lQ83WjQN3aEG\";}'
+    'advanced-frontend' => '3u1nl6iiu8p9k8rtdk33ihj2d3'
+    'advanced-backend' => 'bhg9kn8oceeglj56thhl4q81g4'
+    '_identity-backend' => '5922d94b0ed841516349327e8252876882ae5b9492228c2c284477328cc29594a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"MzNk-JGfPoG-sAloPRKMKflk6fa9AHCD\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/blogyii/backend/web/index.php?r=site%2Findex'
+    '__id' => 1
+]
+
+$_SERVER = [
+    'UNIQUE_ID' => 'WLC7tsCoAXEAADxMkksAAAAG'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/blogyii/backend/web/index.php?r='
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es,en;q=0.8,es-419;q=0.6'
+    'HTTP_COOKIE' => '_csrf-frontend=746d413aec5ee6db873e5f19d3aeb05bd699fc77f8a5382f6f178e9db03576a8a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22lagtA0sk0Cx5EnJnhpXCV-Ncw-vGw8Iq%22%3B%7D; _csrf-backend=662fba13cc632a4686888605bd71df8768c4346fcf6ac8223220a3b9c7214179a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%2298Uz_QTf5ETTdYFuDKy0lQ83WjQN3aEG%22%3B%7D; advanced-frontend=3u1nl6iiu8p9k8rtdk33ihj2d3; advanced-backend=bhg9kn8oceeglj56thhl4q81g4; _identity-backend=5922d94b0ed841516349327e8252876882ae5b9492228c2c284477328cc29594a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22MzNk-JGfPoG-sAloPRKMKflk6fa9AHCD%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'DYLD_LIBRARY_PATH' => '/Applications/XAMPP/xamppfiles/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Unix) OpenSSL/1.0.1p PHP/5.6.12 mod_perl/2.0.8-dev Perl/v5.16.3'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/XAMPP/xamppfiles/htdocs/blogyii/backend/web/index.php'
+    'REMOTE_PORT' => '53231'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Flogout'
+    'REQUEST_URI' => '/blogyii/backend/web/index.php?r=site%2Flogout'
+    'SCRIPT_NAME' => '/blogyii/backend/web/index.php'
+    'PHP_SELF' => '/blogyii/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1487977398.624
+    'REQUEST_TIME' => 1487977398
+]
+2017-02-25 00:03:23 [127.0.0.1][1][bhg9kn8oceeglj56thhl4q81g4][error][yii\web\HttpException:405] exception 'yii\web\MethodNotAllowedHttpException' with message 'Method Not Allowed. This url can only handle the following request methods: POST.' in /Applications/XAMPP/xamppfiles/htdocs/blogyii/vendor/yiisoft/yii2/filters/VerbFilter.php:105
+Stack trace:
+#0 [internal function]: yii\filters\VerbFilter->beforeAction(Object(yii\base\ActionEvent))
+#1 /Applications/XAMPP/xamppfiles/htdocs/blogyii/vendor/yiisoft/yii2/base/Component.php(545): call_user_func(Array, Object(yii\base\ActionEvent))
+#2 /Applications/XAMPP/xamppfiles/htdocs/blogyii/vendor/yiisoft/yii2/base/Controller.php(272): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#3 /Applications/XAMPP/xamppfiles/htdocs/blogyii/vendor/yiisoft/yii2/web/Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#4 /Applications/XAMPP/xamppfiles/htdocs/blogyii/vendor/yiisoft/yii2/base/Controller.php(154): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#5 /Applications/XAMPP/xamppfiles/htdocs/blogyii/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('logout', Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/blogyii/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('site/logout', Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/blogyii/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 /Applications/XAMPP/xamppfiles/htdocs/blogyii/backend/web/index.php(17): yii\base\Application->run()
+#9 {main}
+2017-02-25 00:03:23 [127.0.0.1][1][bhg9kn8oceeglj56thhl4q81g4][info][application] $_GET = [
+    'r' => 'site/logout'
+]
+
+$_COOKIE = [
+    '_csrf-frontend' => '746d413aec5ee6db873e5f19d3aeb05bd699fc77f8a5382f6f178e9db03576a8a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"lagtA0sk0Cx5EnJnhpXCV-Ncw-vGw8Iq\";}'
+    '_csrf-backend' => '662fba13cc632a4686888605bd71df8768c4346fcf6ac8223220a3b9c7214179a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"98Uz_QTf5ETTdYFuDKy0lQ83WjQN3aEG\";}'
+    'advanced-frontend' => '3u1nl6iiu8p9k8rtdk33ihj2d3'
+    'advanced-backend' => 'bhg9kn8oceeglj56thhl4q81g4'
+    '_identity-backend' => '5922d94b0ed841516349327e8252876882ae5b9492228c2c284477328cc29594a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"MzNk-JGfPoG-sAloPRKMKflk6fa9AHCD\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/blogyii/backend/web/index.php?r=site%2Findex'
+    '__id' => 1
+]
+
+$_SERVER = [
+    'UNIQUE_ID' => 'WLC7u8CoAXEAACmzBBIAAAAJ'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/blogyii/backend/web/index.php?r=site%2Flogout'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es,en;q=0.8,es-419;q=0.6'
+    'HTTP_COOKIE' => '_csrf-frontend=746d413aec5ee6db873e5f19d3aeb05bd699fc77f8a5382f6f178e9db03576a8a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22lagtA0sk0Cx5EnJnhpXCV-Ncw-vGw8Iq%22%3B%7D; _csrf-backend=662fba13cc632a4686888605bd71df8768c4346fcf6ac8223220a3b9c7214179a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%2298Uz_QTf5ETTdYFuDKy0lQ83WjQN3aEG%22%3B%7D; advanced-frontend=3u1nl6iiu8p9k8rtdk33ihj2d3; advanced-backend=bhg9kn8oceeglj56thhl4q81g4; _identity-backend=5922d94b0ed841516349327e8252876882ae5b9492228c2c284477328cc29594a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22MzNk-JGfPoG-sAloPRKMKflk6fa9AHCD%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'DYLD_LIBRARY_PATH' => '/Applications/XAMPP/xamppfiles/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Unix) OpenSSL/1.0.1p PHP/5.6.12 mod_perl/2.0.8-dev Perl/v5.16.3'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/XAMPP/xamppfiles/htdocs/blogyii/backend/web/index.php'
+    'REMOTE_PORT' => '53232'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Flogout'
+    'REQUEST_URI' => '/blogyii/backend/web/index.php?r=site%2Flogout'
+    'SCRIPT_NAME' => '/blogyii/backend/web/index.php'
+    'PHP_SELF' => '/blogyii/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1487977403.007
+    'REQUEST_TIME' => 1487977403
+]
+2017-02-25 00:14:24 [127.0.0.1][1][bhg9kn8oceeglj56thhl4q81g4][error][yii\web\HttpException:405] exception 'yii\web\MethodNotAllowedHttpException' with message 'Method Not Allowed. This url can only handle the following request methods: POST.' in /Applications/XAMPP/xamppfiles/htdocs/blogyii/vendor/yiisoft/yii2/filters/VerbFilter.php:105
+Stack trace:
+#0 [internal function]: yii\filters\VerbFilter->beforeAction(Object(yii\base\ActionEvent))
+#1 /Applications/XAMPP/xamppfiles/htdocs/blogyii/vendor/yiisoft/yii2/base/Component.php(545): call_user_func(Array, Object(yii\base\ActionEvent))
+#2 /Applications/XAMPP/xamppfiles/htdocs/blogyii/vendor/yiisoft/yii2/base/Controller.php(272): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#3 /Applications/XAMPP/xamppfiles/htdocs/blogyii/vendor/yiisoft/yii2/web/Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#4 /Applications/XAMPP/xamppfiles/htdocs/blogyii/vendor/yiisoft/yii2/base/Controller.php(154): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#5 /Applications/XAMPP/xamppfiles/htdocs/blogyii/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('logout', Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/blogyii/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('site/logout', Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/blogyii/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 /Applications/XAMPP/xamppfiles/htdocs/blogyii/backend/web/index.php(17): yii\base\Application->run()
+#9 {main}
+2017-02-25 00:14:24 [127.0.0.1][1][bhg9kn8oceeglj56thhl4q81g4][info][application] $_GET = [
+    'r' => 'site/logout'
+]
+
+$_COOKIE = [
+    '_csrf-frontend' => '746d413aec5ee6db873e5f19d3aeb05bd699fc77f8a5382f6f178e9db03576a8a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"lagtA0sk0Cx5EnJnhpXCV-Ncw-vGw8Iq\";}'
+    '_csrf-backend' => '662fba13cc632a4686888605bd71df8768c4346fcf6ac8223220a3b9c7214179a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"98Uz_QTf5ETTdYFuDKy0lQ83WjQN3aEG\";}'
+    'advanced-frontend' => '3u1nl6iiu8p9k8rtdk33ihj2d3'
+    'advanced-backend' => 'bhg9kn8oceeglj56thhl4q81g4'
+    '_identity-backend' => '5922d94b0ed841516349327e8252876882ae5b9492228c2c284477328cc29594a:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[1,\"MzNk-JGfPoG-sAloPRKMKflk6fa9AHCD\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/blogyii/backend/web/index.php?r=site%2Findex'
+    '__id' => 1
+]
+
+$_SERVER = [
+    'UNIQUE_ID' => 'WLC@UMCoAXEAAKMWJCMAAAAC'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/blogyii/backend/web/index.php?r='
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es,en;q=0.8,es-419;q=0.6'
+    'HTTP_COOKIE' => '_csrf-frontend=746d413aec5ee6db873e5f19d3aeb05bd699fc77f8a5382f6f178e9db03576a8a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22lagtA0sk0Cx5EnJnhpXCV-Ncw-vGw8Iq%22%3B%7D; _csrf-backend=662fba13cc632a4686888605bd71df8768c4346fcf6ac8223220a3b9c7214179a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%2298Uz_QTf5ETTdYFuDKy0lQ83WjQN3aEG%22%3B%7D; advanced-frontend=3u1nl6iiu8p9k8rtdk33ihj2d3; advanced-backend=bhg9kn8oceeglj56thhl4q81g4; _identity-backend=5922d94b0ed841516349327e8252876882ae5b9492228c2c284477328cc29594a%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22MzNk-JGfPoG-sAloPRKMKflk6fa9AHCD%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'DYLD_LIBRARY_PATH' => '/Applications/XAMPP/xamppfiles/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Unix) OpenSSL/1.0.1p PHP/5.6.12 mod_perl/2.0.8-dev Perl/v5.16.3'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/XAMPP/xamppfiles/htdocs/blogyii/backend/web/index.php'
+    'REMOTE_PORT' => '56203'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Flogout'
+    'REQUEST_URI' => '/blogyii/backend/web/index.php?r=site%2Flogout'
+    'SCRIPT_NAME' => '/blogyii/backend/web/index.php'
+    'PHP_SELF' => '/blogyii/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1487978064.133
+    'REQUEST_TIME' => 1487978064
+]
+2017-02-25 00:20:08 [127.0.0.1][-][s8rml2947g7uiev49k0a0h48v6][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'No Pasarás.' in /Applications/XAMPP/xamppfiles/htdocs/blogyii/common/models/LoginForm.php:73
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/blogyii/backend/controllers/SiteController.php(81): common\models\LoginForm->loginAdmin()
+#1 [internal function]: backend\controllers\SiteController->actionLogin()
+#2 /Applications/XAMPP/xamppfiles/htdocs/blogyii/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/blogyii/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/blogyii/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('login', Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/blogyii/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('site/login', Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/blogyii/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /Applications/XAMPP/xamppfiles/htdocs/blogyii/backend/web/index.php(17): yii\base\Application->run()
+#8 {main}
+2017-02-25 00:20:07 [127.0.0.1][-][s8rml2947g7uiev49k0a0h48v6][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_POST = [
+    '_csrf-backend' => 'SGVOY2I5Q3VxXRsZPWgXE30gGjcGYAUADC43Uw5oe0YfDx8tUVgGMg=='
+    'LoginForm' => [
+        'username' => 'edgarnajera1'
+        'password' => 'eyehaveyou1324'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_COOKIE = [
+    '_csrf-frontend' => '746d413aec5ee6db873e5f19d3aeb05bd699fc77f8a5382f6f178e9db03576a8a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"lagtA0sk0Cx5EnJnhpXCV-Ncw-vGw8Iq\";}'
+    '_csrf-backend' => '662fba13cc632a4686888605bd71df8768c4346fcf6ac8223220a3b9c7214179a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"98Uz_QTf5ETTdYFuDKy0lQ83WjQN3aEG\";}'
+    'advanced-frontend' => '3u1nl6iiu8p9k8rtdk33ihj2d3'
+    'advanced-backend' => 's8rml2947g7uiev49k0a0h48v6'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/blogyii/backend/web/index.php'
+]
+
+$_SERVER = [
+    'UNIQUE_ID' => 'WLC-p8CoAXEAAAkwoa4AAAAB'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '220'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/blogyii/backend/web/index.php?r=site%2Flogin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'es,en;q=0.8,es-419;q=0.6'
+    'HTTP_COOKIE' => '_csrf-frontend=746d413aec5ee6db873e5f19d3aeb05bd699fc77f8a5382f6f178e9db03576a8a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22lagtA0sk0Cx5EnJnhpXCV-Ncw-vGw8Iq%22%3B%7D; _csrf-backend=662fba13cc632a4686888605bd71df8768c4346fcf6ac8223220a3b9c7214179a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%2298Uz_QTf5ETTdYFuDKy0lQ83WjQN3aEG%22%3B%7D; advanced-frontend=3u1nl6iiu8p9k8rtdk33ihj2d3; advanced-backend=s8rml2947g7uiev49k0a0h48v6'
+    'PATH' => '/usr/bin:/bin:/usr/sbin:/sbin'
+    'DYLD_LIBRARY_PATH' => '/Applications/XAMPP/xamppfiles/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.16 (Unix) OpenSSL/1.0.1p PHP/5.6.12 mod_perl/2.0.8-dev Perl/v5.16.3'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/Applications/XAMPP/xamppfiles/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/Applications/XAMPP/xamppfiles/htdocs/blogyii/backend/web/index.php'
+    'REMOTE_PORT' => '57640'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_URI' => '/blogyii/backend/web/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/blogyii/backend/web/index.php'
+    'PHP_SELF' => '/blogyii/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1487978407.794
+    'REQUEST_TIME' => 1487978407
+]

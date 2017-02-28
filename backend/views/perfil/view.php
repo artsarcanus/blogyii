@@ -1,35 +1,41 @@
 <?php
+
 use yii\helpers\Html;
 use yii\widgets\DetailView;
 use common\models\PermisosHelpers;
+
 /**
  * @var yii\web\View $this
- * @var frontend\models\Perfil $model
+ * @var frontend\models\Profile $model
  */
-$this->title = "Perfil de " . $model->user->username;
+
+$this->title = $model->user->username;
+
+$mostrar_esta_nav = PermisosHelpers::requerirMinimoRol('SuperAdmin');
+
 $this->params['breadcrumbs'][] = ['label' => 'Perfiles', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
- 
 ?>
-<div class="perfil-view">
+<div class="profile-view">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+    <h1>Perfil:  <?= Html::encode($this->title) ?></h1>
+
 
     <p>
-        <?Php
-        //esto no es necesario pero está aquí como ejemplo
-        if (PermisosHelpers::userDebeSerPropietario('perfil', $model->id)) {
-            echo Html::a('Update', ['update', 'id' => $model->id],
-                ['class' => 'btn btn-primary']);
-        } ?>
 
-        <?= Html::a('Delete', ['delete', 'id' => $model->id], [
-            'class' => 'btn btn-danger',
-            'data' => [
-                'confirm' => Yii::t('app', 'Are you sure to delete this item?'),
-                'method' => 'post',
-            ],
-        ]) ?>
+        <?php if (!Yii::$app->user->isGuest && $mostrar_esta_nav) {
+            echo Html::a('Update', ['update', 'id' => $model->id],
+                ['class' => 'btn btn-primary']);}?>
+
+
+        <?php if (!Yii::$app->user->isGuest && $mostrar_esta_nav) {
+            echo Html::a('Delete', ['delete', 'id' => $model->id], [
+                'class' => 'btn btn-danger',
+                'data' => [
+                    'confirm' => Yii::t('app', 'Are you sure you want to delete this item?'),
+                    'method' => 'post',
+                ],
+            ]);}?>
 
     </p>
 
@@ -37,16 +43,15 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
-            //'id',
-            'user.username',
+            ['attribute'=>'userLink', 'format'=>'raw'],
             'nombre',
             'apellido',
             'fecha_nacimiento',
             'genero.genero_nombre',
             'created_at',
             'updated_at',
-            //'user_id',
+            'id',
         ],
-    ]) ?>
+    ])?>
 
 </div>

@@ -17,7 +17,7 @@ class SiteController extends Controller
     /**
      * @inheritdoc
      */
-    public function behaviors()
+    Public function behaviors()
     {
         return [
             'access' => [
@@ -28,9 +28,19 @@ class SiteController extends Controller
                         'allow' => true,
                     ],
                     [
-                        'actions' => ['logout', 'index'],
+                        'actions' => ['index'],
                         'allow' => true,
                         'roles' => ['@'],
+                        'matchCallback' => function ($rule, $action) {
+                         return PermisosHelpers::requerirMinimoRol('Administrador') 
+                         && PermisosHelpers::requerirEstado('Activo');
+                        }
+                    ],
+                    [
+                        'actions' => ['logout'],
+                        'allow' => true,
+                        'roles' => ['@'],
+                       
                     ],
                 ],
             ],
